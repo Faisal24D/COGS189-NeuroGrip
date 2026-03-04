@@ -24,14 +24,14 @@ SYNC_BLINKS = 3
 SYNC_GAP_SEC = 2.0
 
 STREAM_PULL_SEC = 0.05  # how often we pull from Cyton buffer in background
-CYTON_ENABLED = False  # set True in the lab
+CYTON_ENABLED = True  # set True in the lab
 # --------------------------
 # Cyton utilities
 # --------------------------
 def find_openbci_port():
     """
     Simplest version: BrainFlow can often auto-find if serial_port is empty.
-    If your lab requires explicit port scan like Simon's, we can add it.
+    
     """
     return ""  # try auto first
 
@@ -84,7 +84,7 @@ def main():
     print("Script started")
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     eeg_path = f"eeg_{stamp}.csv"
-    events_path = f"events_{stamp}.csv"
+    events_path = f"events_{stamp}.csv" 
 
     # Create trial list
     trials = (["single"] * N_SINGLE) + (["double"] * N_DOUBLE)
@@ -97,7 +97,7 @@ def main():
 
     # Corner indicator dot (top-right)
     indicator = visual.Circle(
-        WIN, radius=0.03, pos=(0.9, 0.85),
+        WIN, radius=0.03, pos=(0.9, -0.85),
         fillColor="red", lineColor="red"
     )
 
