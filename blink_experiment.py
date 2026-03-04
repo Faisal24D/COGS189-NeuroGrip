@@ -31,6 +31,7 @@ CYTON_ENABLED = True  # set True in the lab
 def find_openbci_port():
     """
     Simplest version: BrainFlow can often auto-find if serial_port is empty.
+    If the lab requires explicit port scan like Simon's we can add it
     
     """
     return ""  # try auto first
