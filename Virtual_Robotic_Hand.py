@@ -25,7 +25,7 @@ from sklearn.pipeline import make_pipeline
 # ─────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────
-CYTON_ENABLED  = True       # set True when board is plugged in
+CYTON_ENABLED  = False       # set True when board is plugged in
 
 DATA_DIR       = r"C:\Users\f1f99\OneDrive\Documents\Blink_Project"
 FS             = 250
